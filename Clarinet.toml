@@ -9,7 +9,7 @@ boot_contracts = ["pox", "costs-v2", "bns"]
 
 [contracts.my-contract-2]
 path = "contracts/my-contract-2.clar"
-depends_on = []
+depends_on = ["my-contract", "callback-trait"]
 
 [contracts.my-contract]
 path = "contracts/my-contract.clar"
@@ -17,7 +17,7 @@ depends_on = []
 
 [contracts.callback-trait]
 path = "contracts/callback-trait.clar"
-depends_on = []
+depends_on = ["callback-trait"]
 
 
 [repl]
