@@ -1,6 +1,11 @@
 
 ;; protocol-contract
-;; <add a description here>
+;; Sample protocol contract for using DLC.Link.
+;; This contract is a sample representing a protocol that would call into the DLC.Link management contract
+;; It borrows from the Clarity trait to
+;; - Open the dlc
+;; - Accept the callback and store the returned UUID
+;; - Close the DLC
 
 ;; constants
 (define-constant err-cant-unwrap (err u1000))
@@ -18,11 +23,7 @@
 	}
 )
 
-
 ;; private functions
-;;
-
-;; public functions
 ;;
 
 (use-trait cb-trait .dlc-create-callback-trait.dlc-create-callback-trait)
@@ -40,6 +41,9 @@
         (ok true)
     )
 )
+
+;; public functions
+;;
 
 (define-public (setup-user-contract (target <cb-trait>))
     ;; as one of the steps in the setup-user-contract function, it calls the dlc contract to create a dlc
