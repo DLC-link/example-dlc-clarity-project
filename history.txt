@@ -1,0 +1,8 @@
+#V2
+(contract-call? .protocol-contract setup-user-contract .protocol-contract)
+exit
+contract-call? .protocol-contract .setup-user-contract .protocol-contract)
+(contract-call? .protocol-contract .setup-user-contract .protocol-contract)
+(contract-call? .protocol-contract setup-user-contract .protocol-contract)
+exit
+(contract-call? .protocol-contract setup-user-contract .protocol-contract)

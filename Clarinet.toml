@@ -7,17 +7,17 @@ requirements = []
 boot_contracts = ["pox", "costs-v2", "bns"]
 
 
-[contracts.my-contract-2]
-path = "contracts/my-contract-2.clar"
-depends_on = ["my-contract", "callback-trait"]
+[contracts.protocol-contract]
+path = "contracts/protocol-contract.clar"
+depends_on = ["dlc-mgmt-contract", "dlc-create-callback-trait"]
 
-[contracts.my-contract]
-path = "contracts/my-contract.clar"
+[contracts.dlc-mgmt-contract]
+path = "contracts/dlc-mgmt-contract.clar"
 depends_on = []
 
-[contracts.callback-trait]
-path = "contracts/callback-trait.clar"
-depends_on = ["callback-trait"]
+[contracts.dlc-create-callback-trait]
+path = "contracts/dlc-create-callback-trait.clar"
+depends_on = ["dlc-create-callback-trait"]
 
 
 [repl]
